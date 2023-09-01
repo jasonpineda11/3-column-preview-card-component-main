@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Lexend Deca;
+    src: url(https://fonts.google.com/specimen/Lexend+Deca);
+    font-weight: 400;
+}
+
+
+
+:root {
+    --bright-orange: hsl(31,77%,52%);
+    --dark-cyan: hsl(184,100%,13%);
+    --very-dark-cyan: hsl(179,100%,13%);
+
+
+    --transparent-white: hsla(0,0,100%,0.75);
+    --very-light-gray: hsl(0,0%,95%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    place-items: center;
+}
+
+.content-card-1 {
+    place-items: center;
+}
