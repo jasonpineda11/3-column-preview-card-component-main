@@ -1,10 +1,17 @@
 @font-face {
-    font-family: Lexend Deca;
-    src: url(https://fonts.google.com/specimen/Lexend+Deca);
+    font-family: 'Lexend';
     font-weight: 400;
+    src: url('./assets/lexenddeca-variablefont_wght-webfont.woff2') format('woff2');
+    src: url('./assets/lexenddeca-variablefont_wght-webfont.woff') format('woff');
+
 }
 
-
+@font-face {
+    font-family: 'BigShoulder';
+    font-weight: 700;
+    src: url('./assets/BigShouldersDisplay-Bold.ttf') format('ttf');
+    
+}
 
 :root {
     --bright-orange: hsl(31,77%,52%);
@@ -17,19 +24,136 @@
 
 }
 
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
+
+
+img,
+svg {
+    box-sizing: border-box;
+    width: 50px;
+}
+
 
 .grid-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; 
     place-items: center;
+    grid-template-columns: repeat(3, minmax(400px, 1fr) ) ;
+    border-radius: 10px;
+
 }
 
+
+.button {
+    border: solid 2px var(--very-light-gray);
+    border-radius: 100px;
+    padding: 8px;
+    width: 120px;
+    margin-top: 15px;
+    margin-left: 5px;
+    
+}
+
+.content-card-1 > .button {
+    color:var(--bright-orange);
+}
+
+.content-card-2 > .button {
+    color: var(--dark-cyan);
+}
+
+.content-card-3 > .button {
+    color: var(--very-dark-cyan);
+}
+
+
+
 .content-card-1 {
-    place-items: center;
+    background-color: var(--bright-orange);
+    padding: 10px;
+
+}
+
+.content-card-2 {
+    background-color: var(--dark-cyan);
+    padding: 10px;
+}
+
+.content-card-3 {
+    background-color: var(--very-dark-cyan);
+    padding: 10px;
+}
+
+h2 {
+    color: var(--very-light-gray);
+    font-family: 'BigShoulder';
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+p {
+    color: var(--very-light-gray);
+    font-family: 'Lexend';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    margin-top: 20px;
+    height: 200px;
+}
+
+
+@media (max-width:375px){
+    .grid-layout {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        
+    }
+
+    .content-card-1,
+    .content-card-2,
+    .content-card-3 {
+        padding: 30px;
+    }
+
+    p {
+        display: flex;
+        min-width: 200px;
+        align-items: center;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width:375px){
+    .button {
+        background-color: var(--very-light-gray);
+        
+    }
+
+    .content-card-1 > .button {
+        color: var(--bright-orange);
+    }
+
+    .content-card-2 > .button {
+        color: var(--dark-cyan);
+    }
+
+    .content-card-3 > .button {
+        color: var(--very-dark-cyan);
+    }
+
+
 }
