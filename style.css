@@ -38,11 +38,19 @@ svg {
     width: 50px;
 }
 
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 
 .grid-layout {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(3, minmax(400px, 1fr) ) ;
+    grid-template-columns: repeat(3, 300px ) ;
     border-radius: 10px;
 
 }
